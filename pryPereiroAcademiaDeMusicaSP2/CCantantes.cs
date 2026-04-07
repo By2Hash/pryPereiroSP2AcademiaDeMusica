@@ -8,7 +8,7 @@ using System.Data.OleDb;
 
 namespace pryPereiroAcademiaDeMusicaSP2
 {
-    internal class CCantantes
+    public class CCantantes
     {
         public DataTable dtCantantes;
         private OleDbDataAdapter da;
