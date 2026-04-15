@@ -77,6 +77,7 @@
             this.btnGuardar.TabIndex = 4;
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnSalir
             // 
@@ -146,6 +147,7 @@
             this.Name = "frmTema";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tema";
+            this.Load += new System.EventHandler(this.frmTema_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

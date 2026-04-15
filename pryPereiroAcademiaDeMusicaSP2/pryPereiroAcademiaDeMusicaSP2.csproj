@@ -46,9 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CCantantes.cs" />
-    <Compile Include="CConexion.cs" />
-    <Compile Include="CTema.cs" />
+    <Compile Include="Clases\CCantantes.cs" />
+    <Compile Include="Clases\CConexion.cs" />
+    <Compile Include="Clases\CTema.cs" />
     <Compile Include="frmCantante.cs">
       <SubType>Form</SubType>
     </Compile>

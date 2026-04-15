@@ -22,6 +22,7 @@ namespace pryPereiroAcademiaDeMusicaSP2
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            conexion.Desconectar();
             Close();
         }
        
@@ -59,5 +60,35 @@ namespace pryPereiroAcademiaDeMusicaSP2
             return resultado;
         }
 
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            long Id = 0;
+            string Nombre = "";
+            if (ValidarDatos())
+            {
+                long.TryParse(txtCantante.Text, out Id);
+                Nombre = txtNombre.Text;
+                if(cantante.BuscarCantante(Id) == false)
+                {
+                    if (cantante.NuevoCantante(Id, Nombre))
+                    {
+                        txtCantante.Text = "";
+                        txtNombre.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al agregar el cantante: " + cantante.ObtenerError());
+                    }
+                }
+                else
+                {
+                                       MessageBox.Show("El Id del cantante ya existe. Por favor, ingrese un Id diferente.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, complete todos los campos correctamente. El Id debe ser un número positivo.");
+            }
+        }
     }
 }
