@@ -1,4 +1,4 @@
-﻿using Gecko;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +17,7 @@ namespace pryPereiroAcademiaDeMusicaSP2
         private CConexion conexion;
         private CCantantes cantante;
         private CTema tema;
-        private GeckoWebBrowser geckoWebBrowser;
+        
         public frmVideo()
         {
             InitializeComponent();
@@ -28,13 +28,7 @@ namespace pryPereiroAcademiaDeMusicaSP2
             // cerrar la conexión con la base de datos
             conexion.Desconectar();
             // controlar el estado del webBrowser
-            if (!(geckoWebBrowser is null)) // si no es nulo
-            {
-                // detener la navegación
-                geckoWebBrowser.Stop();
-                // liberar los recursos del objeto
-                geckoWebBrowser.Dispose();
-            }
+            
             Close();
         }
 
@@ -80,45 +74,8 @@ namespace pryPereiroAcademiaDeMusicaSP2
 
         private void btnVerVideo_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtLink.Text))
-                return;
-
-            string firefoxPath = System.IO.Path.Combine(Application.StartupPath, "Firefox");
-            string xulFile = System.IO.Path.Combine(firefoxPath, "xul.dll");
-
-            if (!System.IO.Directory.Exists(firefoxPath) || !System.IO.File.Exists(xulFile))
-            {
-                MessageBox.Show("No se encontró 'xul.dll' en:\n" + firefoxPath +
-                    "\n\nColoca la carpeta completa del runtime de Gecko (Firefox/XULRunner) ahí, que contenga xul.dll.");
-                return;
-            }
-
-            try
-            {
-                Xpcom.Initialize(firefoxPath);
-            }
-            catch (System.DllNotFoundException dllEx)
-            {
-                MessageBox.Show("DLL no encontrada: " + dllEx.Message + "\nVerifica que 'xul.dll' y sus dependencias existan y corresponda la arquitectura.");
-                return;
-            }
-            catch (System.BadImageFormatException badEx)
-            {
-                MessageBox.Show("Incompatibilidad de arquitectura (x86/x64): " + badEx.Message + "\nCompila la app para la misma arquitectura que el runtime de Firefox.");
-                return;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error inicializando Gecko: " + ex.Message);
-                return;
-            }
-
-            // crear el control webBrowser
-            geckoWebBrowser?.Dispose();
-            geckoWebBrowser = new GeckoWebBrowser { Dock = DockStyle.Fill };
-            grpBrowser.Controls.Clear();
-            grpBrowser.Controls.Add(geckoWebBrowser);
-            geckoWebBrowser.Navigate(txtLink.Text);
+            if (!string.IsNullOrWhiteSpace(txtLink.Text))
+                System.Diagnostics.Process.Start(txtLink.Text);
         }
     }
 }
