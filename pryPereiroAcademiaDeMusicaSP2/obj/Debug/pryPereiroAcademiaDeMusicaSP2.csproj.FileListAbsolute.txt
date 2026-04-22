@@ -69,3 +69,12 @@ C:\Users\baupe\OneDrive\Escritorio\By2Hash\pryPereiroSP2AcademiaDeMusica\pryPere
 C:\Users\baupe\OneDrive\Escritorio\By2Hash\pryPereiroSP2AcademiaDeMusica\pryPereiroAcademiaDeMusicaSP2\obj\Debug\pryPerei.A9441709.Up2Date
 C:\Users\baupe\OneDrive\Escritorio\By2Hash\pryPereiroSP2AcademiaDeMusica\pryPereiroAcademiaDeMusicaSP2\obj\Debug\pryPereiroAcademiaDeMusicaSP2.exe
 C:\Users\baupe\OneDrive\Escritorio\By2Hash\pryPereiroSP2AcademiaDeMusica\pryPereiroAcademiaDeMusicaSP2\obj\Debug\pryPereiroAcademiaDeMusicaSP2.pdb
+C:\Users\baupe\OneDrive\Escritorio\By2Hash\pryPereiroSP2AcademiaDeMusica\pryPereiroAcademiaDeMusicaSP2\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\baupe\OneDrive\Escritorio\By2Hash\pryPereiroSP2AcademiaDeMusica\pryPereiroAcademiaDeMusicaSP2\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\baupe\OneDrive\Escritorio\By2Hash\pryPereiroSP2AcademiaDeMusica\pryPereiroAcademiaDeMusicaSP2\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\baupe\OneDrive\Escritorio\By2Hash\pryPereiroSP2AcademiaDeMusica\pryPereiroAcademiaDeMusicaSP2\bin\Debug\Microsoft.Web.WebView2.Core.dll
+C:\Users\baupe\OneDrive\Escritorio\By2Hash\pryPereiroSP2AcademiaDeMusica\pryPereiroAcademiaDeMusicaSP2\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\baupe\OneDrive\Escritorio\By2Hash\pryPereiroSP2AcademiaDeMusica\pryPereiroAcademiaDeMusicaSP2\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\baupe\OneDrive\Escritorio\By2Hash\pryPereiroSP2AcademiaDeMusica\pryPereiroAcademiaDeMusicaSP2\bin\Debug\Microsoft.Web.WebView2.Core.xml
+C:\Users\baupe\OneDrive\Escritorio\By2Hash\pryPereiroSP2AcademiaDeMusica\pryPereiroAcademiaDeMusicaSP2\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\baupe\OneDrive\Escritorio\By2Hash\pryPereiroSP2AcademiaDeMusica\pryPereiroAcademiaDeMusicaSP2\bin\Debug\Microsoft.Web.WebView2.Wpf.xml

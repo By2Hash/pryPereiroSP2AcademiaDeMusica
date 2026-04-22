@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Web.WebView2.WinForms;
+
 
 namespace pryPereiroAcademiaDeMusicaSP2
 {
@@ -17,7 +19,8 @@ namespace pryPereiroAcademiaDeMusicaSP2
         private CConexion conexion;
         private CCantantes cantante;
         private CTema tema;
-        
+        private WebView2 webView;
+
         public frmVideo()
         {
             InitializeComponent();
@@ -25,12 +28,12 @@ namespace pryPereiroAcademiaDeMusicaSP2
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            // cerrar la conexión con la base de datos
+           
             conexion.Desconectar();
-            // controlar el estado del webBrowser
-            
+            webView?.Dispose();
             Close();
         }
+        
 
         private void frmVideo_Load(object sender, EventArgs e)
         {
@@ -72,10 +75,21 @@ namespace pryPereiroAcademiaDeMusicaSP2
 
         }
 
-        private void btnVerVideo_Click(object sender, EventArgs e)
+        private async void btnVerVideo_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(txtLink.Text))
-                System.Diagnostics.Process.Start(txtLink.Text);
+            if (string.IsNullOrWhiteSpace(txtLink.Text))
+                return;
+
+            // Crear el WebView2 si no existe
+            if (webView == null)
+            {
+                webView = new WebView2();
+                webView.Dock = DockStyle.Fill;
+                grpBrowser.Controls.Add(webView);
+                await webView.EnsureCoreWebView2Async(null);
+            }
+
+            webView.Source = new Uri(txtLink.Text);
         }
     }
 }
